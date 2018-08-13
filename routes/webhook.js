@@ -44,12 +44,10 @@ function handleMessages(message, senderID) {
     if(message.text) {
         response = { "text" : message.text };
     }
-    console.log("HERE");
     callSendAPI(response, senderID);
 }
 
 function callSendAPI(response, senderID) {
-    console.log("ALSO HERE");
     let requestBody = {
         "recipient": {
             "id": senderID
@@ -69,6 +67,5 @@ function callSendAPI(response, senderID) {
                 console.error("Unable to send message:" + err);
             }
         }); 
-    console.log("DONE");
 }
 module.exports = router;
