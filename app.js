@@ -10,6 +10,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var webhookRouter = require('./routes/webhook');
 
+ACCESS_TOKEN = process.env.MRHOUSE_TOKEN;
+
 var app = express();
 
 // view engine setup
